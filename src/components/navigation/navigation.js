@@ -21,6 +21,12 @@ class Navigation extends Component {
                         <LinkContainer to="/recipes">
                             <Nav.Link>Manage Recipes</Nav.Link>
                         </LinkContainer>
+                        <LinkContainer to="/jeopardy">
+                            <Nav.Link>Jeopardy</Nav.Link>
+                        </LinkContainer>
+                        <LinkContainer to="/game">
+                            <Nav.Link>Game</Nav.Link>
+                        </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

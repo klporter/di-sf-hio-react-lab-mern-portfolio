@@ -13,6 +13,7 @@ class RecipeTable extends Component {
                 <tr key={recipe._id}>
                     <td>{recipe.name}</td>
                     <td>{recipe.author.name}</td>
+                    <td>{recipe.author.email}</td>
                     <td>{recipe.ingredients.join(", ")}</td>
                     <td>{recipe.averageCost}</td>
                     <td style={{whiteSpace: "nowrap"}}>
@@ -30,6 +31,7 @@ class RecipeTable extends Component {
                     <tr>
                         <th>Name</th>
                         <th>Author</th>
+                        <th>Email</th>
                         <th>Ingredients</th>
                         <th>AverageCost</th>
                         <th>Admin</th>

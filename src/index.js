@@ -6,10 +6,17 @@ import * as serviceWorker from './serviceWorker';
 
 //import browser router so we can use it in our application
 import { BrowserRouter } from "react-router-dom";
+import {createStore} from "redux";
+import portfolioApp from "./reducers";
+import {Provider} from "react-redux";
+
+let store = createStore(portfolioApp);
 
 ReactDOM.render(
     <BrowserRouter>
-        <App />
+        <Provider store={store}>
+            <App/>
+        </Provider>
     </BrowserRouter>
 , document.getElementById('root'));
 
