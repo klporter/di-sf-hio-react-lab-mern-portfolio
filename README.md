@@ -53,6 +53,8 @@ The goal is to take our redux connected Jeopardy lab from day 3 and add it to ou
 * Move over the Jeopardy component files from your previous lab
 * Ensure you account for the necessary actions, reducers, and containers that make Jeopardy function 
 * Add a button that allows the user to restart their jeopardy game.
+* Add a link to the Navigation in our portfolio to access your Jeopardy game
+* Create a route in `App.js` to display the game when the link is clicked in the Navigation
 
 ## Hard Mode
 Update your express application to include a new API endpoint that manages a subject matter of your choosing. This will live in your cookBook db in Mongo but it does not have to be related to cooking or cook books. You should focus on providing the same CRUD functionality you have with recipes. Update your portfolio application using the Recipe component as a reference to add a component that manages your new endpoint.
