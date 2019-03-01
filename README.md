@@ -1,5 +1,5 @@
 # React MERN Portfolio LAB
-In this lab, you will be building the front-end to the Recipe API we built in express. The front end will provide all the CRUD functionality for you to manage your recipes. We will also add in the other projects we created during the training to have a portfolio of your accomplishments.
+In this lab, you will be building the front-end to the Recipe API you built in express. The front end will provide all the CRUD functionality for you to manage your recipes. you will also add in the other projects you created during the training to have a portfolio of your accomplishments.
 
 ## Set-up
 This repository is to serve as a starter. It contains a Welcome, Navigation, ManageRecipes, and recipeForm component. It also includes a DataService to talk to the API. 
@@ -37,9 +37,12 @@ Let's set-up our application to leverage Redux centralized state.
 Let's move over previously completed labs.
 
 ### Migrate The Sports Game
-The goal is to take our sports game Lab from day 1 and migrate it to the portfolio. We will also update the sports game to leverage centralized state
+The goal is to take our sports game Lab from day 1 and migrate it to the portfolio. You should also update the sports game to leverage centralized state
 
 * Move over the Sports Game components and assets from the previous into the portfolio
+    * You should store your images and sounds with your component.
+    * Use the webpack extended import feature to import your images into your component.
+        * <https://facebook.github.io/create-react-app/docs/adding-images-fonts-and-files>
 * Ensure you create the needed actions, reducers, and containers that so the Sports Game component can leverage Redux for centralized state 
 * Add a link to the Navigation in our portfolio to access your sports game
 * Create a route in `App.js` to display the game when the link is clicked in the Navigation
