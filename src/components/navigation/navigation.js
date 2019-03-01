@@ -1,0 +1,33 @@
+import React, { Component } from "react";
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+
+import { LinkContainer } from "react-router-bootstrap";
+
+
+class Navigation extends Component {
+
+    render() {
+        return (
+
+            <Navbar bg="dark" variant="dark">
+                <Navbar.Brand href="#home">Reactive Recipes</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto">
+                        <LinkContainer to="/">
+                            <Nav.Link>Home</Nav.Link>
+                        </LinkContainer>
+                        <LinkContainer to="/recipes">
+                            <Nav.Link>Manage Recipes</Nav.Link>
+                        </LinkContainer>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
+
+        )
+    }
+
+}
+
+export default Navigation;
