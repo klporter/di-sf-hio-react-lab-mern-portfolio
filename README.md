@@ -39,7 +39,7 @@ Let's move over previously completed labs.
 ### Migrate The Sports Game
 The goal is to take our sports game Lab from day 1 and migrate it to the portfolio. You should also update the sports game to leverage centralized state
 
-* Move over the Sports Game components and assets from the previous into the portfolio
+* Move over the Sports Game components and assets from the previous project into the portfolio
     * You should store your images and sounds with your component.
     * Use the webpack extended import feature to import your images into your component.
         * <https://facebook.github.io/create-react-app/docs/adding-images-fonts-and-files>
