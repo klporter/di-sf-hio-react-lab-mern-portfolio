@@ -1,68 +1,61 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React MERN Portfolio LAB
+In this lab, you will be building the front-end to the Recipe API we built in express. The front end will provide all the CRUD functionality for you to manage your recipes. We will also add in the other projects we created during the training to have a portfolio of your accomplishments.
 
-## Available Scripts
+## Set-up
+This repository is to serve as a starter. It contains a Welcome, Navigation, ManageRecipes, and recipeForm component. It also includes a DataService to talk to the API. 
 
-In the project directory, you can run:
+* Make sure your Express Recipe API is running on port 3000
+* Fork and clone this repository 
+* Run `npm i` from the projects root directory to install the dependencies
+* Run this application with `npm start` and verify that you can view all and add a new recipe.
 
-### `npm start`
+## Normal Mode
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Edit A Recipe
+Let's implement the edit recipe functionality
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+* The Edit Recipe Functionality should leverage the existing **RecipeForm** component.
+* When you click the **Edit** button next to a recipe it should fetch the correct recipe from the API, show the Recipe Form,
+and populate it with the appropriate data.
+* On a successful update, the form table should be displayed again reflecting the changes
 
-### `npm test`
+### Delete A Recipe
+The **Delete** button in the admin column for each recipe on the **ManageRecipes** component should delete the record from our API
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Update the **ManageRecipes** component and add an event handler that deletes a record when the delete button is clicked for a recipe
+* After the delete the table should be updated and the Recipe removed.
 
-### `npm run build`
+### Redux and Centralized State
+Let's set-up our application to leverage Redux centralized state.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Install the necessary dependencies needed to implement centralized state in our application
+* Create the **Actions** need to support the **ManageRecipes** component
+* Create a **Reducer** to process the recipe actions that will be dispatched to the store
+* Create the **Container** that will render the **ManageRecipes** component
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Medium Mode
+Let's move over previously completed labs.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Migrate The Sports Game
+The goal is to take our sports game Lab from day 1 and migrate it to the portfolio. We will also update the sports game to leverage centralized state
 
-### `npm run eject`
+* Move over the Sports Game components and assets from the previous into the portfolio
+* Ensure you create the needed actions, reducers, and containers that so the Sports Game component can leverage Redux for centralized state 
+* Add a link to the Navigation in our portfolio to access your sports game
+* Create a route in `App.js` to display the game when the link is clicked in the Navigation
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Migrate Jeopardy
+The goal is to take our redux connected Jeopardy lab from day 3 and add it to our portfolio
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Move over the Jeopardy component files from your previous lab
+* Ensure you account for the necessary actions, reducers, and containers that make Jeopardy function 
+* Add a button that allows the user to restart their jeopardy game.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Hard Mode
+Update your express application to include a new API endpoint that manages a subject matter of your choosing. This will live in your cookBook db in Mongo but it does not have to be related to cooking or cook books. You should focus on providing the same CRUD functionality you have with recipes. Update your portfolio application using the Recipe component as a reference to add a component that manages your new endpoint.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* Create a new mongoose schema and model that represents your subject matter
+* Create a service that uses that model to interact with mongodb
+* Create a controller that responds to routes and utilizes the new service.
+* Create the needed routes to access the methods on our new controller
+* Duplicate the Recipe functionality in your React portfolio and add a component that manages your new endpoint

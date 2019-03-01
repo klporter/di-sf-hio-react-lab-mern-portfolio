@@ -11,11 +11,11 @@ class Navigation extends Component {
         return (
 
             <Navbar bg="dark" variant="dark">
-                <Navbar.Brand href="#home">Reactive Recipes</Navbar.Brand>
+                <Navbar.Brand href="#home">React Training Portfolio</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <LinkContainer to="/">
+                        <LinkContainer exact to="/">
                             <Nav.Link>Home</Nav.Link>
                         </LinkContainer>
                         <LinkContainer to="/recipes">
