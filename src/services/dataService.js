@@ -14,24 +14,27 @@ class DataService {
     }
 
     read(id){
+        let url = this.url
         if(id){
-            this.url += "/"+id;
+            url += "/"+id;
         }
-        return this.client.get(this.url);
+        return this.client.get(url);
     }
 
     update(data, id){
+        let url = this.url
         if(id){
-            this.url += "/"+id;
+            url += "/"+id;
         }
-        return this.client.put(this.url, data);
+        return this.client.put(url, data);
     }
 
     delete(id){
+        let url = this.url
         if(id){
-            this.url += "/"+id;
+            url += "/"+id;
         }
-        return this.client.delete(this.url);
+        return this.client.delete(url);
     }   
 
 }
